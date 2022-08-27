@@ -13,7 +13,7 @@
 
 
 
-## The Our Problem
+## Our Problem
 a UK estate agent named Verde Estates; which house of your employees,
 It has difficulty keeping records of when and to which customers it will show. The company
 manager, who wants to use his employees more effectively, especially wants to be able to
@@ -22,15 +22,6 @@ employees for the appointment and all
 these appointments without conflicts among themselves.
 In order to solve these problems, the company needs an application that simulates the
 scenario that we will describe in detail below.
-
-
-##  When should you use JSON Web Tokens?
-Here are some scenarios where JSON Web Tokens are useful:
-<h5>
-1. Authorization: This is the most common scenario for using JWT. Once the user is logged in, each subsequent request will include the JWT, allowing the user to access routes, services, and resources that are permitted with that token. Single Sign On is a feature that widely uses JWT nowadays, because of its small overhead and its ability to be easily used across different domains.
-</br>
-2. Information Exchange: JSON Web Tokens are a good way of securely transmitting information between parties. Because JWTs can be signed—for example, using public/private key pairs—you can be sure the senders are who they say they are. Additionally, as the signature is calculated using the header and the payload, you can also verify that the content hasn't been tampered with. </br>
-</h5>
 
 
 ### Scenario
@@ -105,19 +96,13 @@ development process accordingly.
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## Installation
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-
-### Installation
-
-_Below is an example of how you can instruct your audience on installing and setting up your app
+Below is how you can instruct your audience on installing and setting up your app
 
  1. Clone the repo
    ```sh
- gh repo clone MogahidGaffar/laravel9_ToDoApp_jwt_Api_authentication
+gh repo clone MogahidGaffar/Laravel-backend-developer-challenge
    ```
 2. Install NPM packages
    ```sh
