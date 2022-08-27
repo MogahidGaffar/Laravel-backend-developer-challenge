@@ -24,7 +24,7 @@ In order to solve these problems, the company needs an application that simulate
 scenario that we will describe in detail below.
 
 
-### Scenario
+## Scenario
 
 • Everyone working in the real estate agent should be able to register in this API system
 and likewise should be able to login. (Login and register endpoints). </br>
