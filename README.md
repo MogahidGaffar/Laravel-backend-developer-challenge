@@ -1,64 +1,146 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="#">
+    <img src="https://github.com/MogahidGaffar/Laravel-backend-developer-challenge/blob/main/public/img/laravel_challenge.png" alt="Logo" >
+  </a>
 
-## About Laravel
+  <h3 align="center">Laravel Backend Developer Challenge  </h3>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+</div>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## The Our Problem
+a UK estate agent named Verde Estates; which house of your employees,
+It has difficulty keeping records of when and to which customers it will show. The company
+manager, who wants to use his employees more effectively, especially wants to be able to
+control the length of the processes to and from the appointments, the time allocated by the
+employees for the appointment and all
+these appointments without conflicts among themselves.
+In order to solve these problems, the company needs an application that simulates the
+scenario that we will describe in detail below.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+##  When should you use JSON Web Tokens?
+Here are some scenarios where JSON Web Tokens are useful:
+<h5>
+1. Authorization: This is the most common scenario for using JWT. Once the user is logged in, each subsequent request will include the JWT, allowing the user to access routes, services, and resources that are permitted with that token. Single Sign On is a feature that widely uses JWT nowadays, because of its small overhead and its ability to be easily used across different domains.
+</br>
+2. Information Exchange: JSON Web Tokens are a good way of securely transmitting information between parties. Because JWTs can be signed—for example, using public/private key pairs—you can be sure the senders are who they say they are. Additionally, as the signature is calculated using the header and the payload, you can also verify that the content hasn't been tampered with. </br>
+</h5>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
+### Scenario
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+• Everyone working in the real estate agent should be able to register in this API system
+and likewise should be able to login. (Login and register endpoints). </br>
+• On the appointment creation screen; appointment address, appointment date, attendee
+customer's personal information (name, surname) and contact information (email,
+address, phone number). (Appointment creation endpoint)</br>
+• Realtor is located at cm27pj zip code.</br>
+• The postal code sent as the appointment address and the postal code of the real estate
+agent office should be measured and this value entered into a column in the
+appointment table should be written</br>
+• Appointment duration is considered as 1 hour and the appointment address is given to
+the real estate agent.</br>
+• The estimated time of departure from the office and the real estate office after the
+appointment so that he can go should be able to login. (Login and register endpoints)
+When it will be available, it will return to 2 separate columns in the appointments
+table Should be written (Google maps API can be used for calculations ) </br>
+• Appointment update and deletion endpoints should also be created.</br>
+• An endpoint for listing appointments should be created. This listing endpoint must be
+filtered by date.</br>
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Technical Rules
 
-## Code of Conduct
+• The project should be developed with “Laravel” as main framework and
+with “repository pattern” design.</br>
+• You are expected to prepare an API for the needs identified in the scenario.</br>
+• In this direction, you should create a setup by considering the Users,
+Appointments, Contacts database tables.</br>
+• Prepare documentation for the endpoints you have prepared and</br>
+• The project should be kept in a version management system (preferably gitlab)
+and code changes should be made in part as commits, in English with details
+about the transactions. You can choose the services that offer it.) You must
+define the endpoints in a folder in Postman.</br>
+• JWT should be used for authentication processes and checks should be made
+regarding token expire scenario. </br>
+• The project is completely on Restful communication and data transfer
+architecture.</br>
+• PHP Laravel should be used for back-end technology. </br>
+• Appointment address and real estate agent's address should be followed only by
+zip code. (It should be in the address column). Use open source zip code
+services to obtain location information about addresses. All appointments must
+take place in the UK. </br>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+## Delivery Process
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+• Please share with us the sharing link of Collection, which you defined in
+postman, the repo and endpoints where you kept the project during the delivery
+process.</br>
+• Deploy the project to a remote server. (Free infrastructure like Heroku You can
+choose the services that offer it.)</br>
+• For running the project and necessary details, please readme in the repo keep
+your file up to date</br>
 
-## License
+## Project Development
+This project is designed to measure your perspective on events, your
+technical knowledge, and the solutions you bring to problems. Please advance the
+development process accordingly.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+##  Built With
+
+* Laravel
+* Bootstrap
+* Baldes
+* Mysql DB
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
+
+
+### Installation
+
+_Below is an example of how you can instruct your audience on installing and setting up your app
+
+ 1. Clone the repo
+   ```sh
+ gh repo clone MogahidGaffar/laravel9_ToDoApp_jwt_Api_authentication
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. composer update
+   ```sh
+   composer update
+   ```
+
+3. Database Migrattion
+   ```sh
+   php artisan migrate
+   ```
+ 
+3. Server establish
+   ```sh
+   php artisan serve
+   ```
+
+
+## Contact
+
+Mogahid Gaffar -  mogahidgaffar@gmail.com
+
+
