@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\appointmentController;
+use App\Http\Controllers\API\JWTAuthController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,6 +20,15 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+
+Route::post('register', [JWTAuthController::class, 'register']);
+Route::post('login', [JWTAuthController::class, 'login']);
+ 
+Route::group(['middleware' => 'auth.jwt'], function () {
+
+    Route::post('logout', [JWTAuthController::class, 'logout']);
+ 
+});
 
 
 Route::get('/appointments',[appointmentController::class,'getAll'])->name('appointments.getAllpage');
