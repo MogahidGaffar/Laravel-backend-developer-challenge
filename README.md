@@ -85,6 +85,44 @@ technical knowledge, and the solutions you bring to problems. Please advance the
 development process accordingly.
 
 
+#### CRUD blades screenshots
+
+<img src="https://github.com/MogahidGaffar/Laravel-backend-developer-challenge/blob/main/public/img/crud_screenshoots.png" />
+
+
+#### GetAll appointments Endpoint 
+
+<img src="https://github.com/MogahidGaffar/Laravel-backend-developer-challenge/blob/main/public/img/1.PNG" />
+
+#### GetOne appointment Endpoint 
+
+<img src="https://github.com/MogahidGaffar/Laravel-backend-developer-challenge/blob/main/public/img/2.PNG" />
+
+
+#### create new  appointment Endpoint 
+
+<img src="https://github.com/MogahidGaffar/Laravel-backend-developer-challenge/blob/main/public/img/3.PNG" />
+
+
+#### Update appointment Endpoint 
+
+<img src="https://github.com/MogahidGaffar/Laravel-backend-developer-challenge/blob/main/public/img/4.PNG" />
+
+
+#### Delete appointments Endpoint 
+
+<img src="https://github.com/MogahidGaffar/Laravel-backend-developer-challenge/blob/main/public/img/5.PNG" />
+
+
+#### Jwt auth register Endpoint 
+
+<img src="https://github.com/MogahidGaffar/Laravel-backend-developer-challenge/blob/main/public/img/6.PNG" />
+
+
+#### Jwt auth login Endpoint 
+
+<img src="https://github.com/MogahidGaffar/Laravel-backend-developer-challenge/blob/main/public/img/7.PNG" />
+
 
 
 ##  Built With
