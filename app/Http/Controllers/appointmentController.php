@@ -18,72 +18,45 @@ public AppointmentRepository $appointmentRepository;
     public function getAll()
     {
         $appointments=$this->appointmentRepository->getall();
-return response()->json(['users'=>$appointments]);
+return response()->json(['appointments'=>$appointments]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+  
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+   
+    public function createOne(Request $request)
     {
-        //
+        $appointment=$this->appointmentRepository->create($request->all());
+        return response()->json(['appointment'=>$appointment]);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\appointment  $appointment
-     * @return \Illuminate\Http\Response
-     */
-    public function show(appointment $appointment)
+   
+    public function getOne($appointmentId)
     {
-        //
+        $appointment=$this->appointmentRepository->getById($appointmentId);
+        return response()->json(['appointments'=>$appointment]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\appointment  $appointment
-     * @return \Illuminate\Http\Response
-     */
     public function edit(appointment $appointment)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\appointment  $appointment
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, appointment $appointment)
+    
+    public function UpdateOne($appointmentId,Request $request)
     {
-        //
+        $appointment=$this->appointmentRepository->update($appointmentId,$request->all());
+        return response()->json(['appointment'=>$appointment]);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\appointment  $appointment
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(appointment $appointment)
+    public function delete($appointmentId)
     {
-        //
+    return $this->appointmentRepository->delete($appointmentId);
+
+
     }
 }

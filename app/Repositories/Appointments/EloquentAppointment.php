@@ -30,13 +30,16 @@ public function create(array $attributes){
 }
 
 public function update($id , array $attributes){
-    return $this->appointment->update($attributes);
+     $appointment=$this->appointment->find($id);
+  $appointment->update($attributes);
+ return $appointment;
 
 }
 
 public function delete($id ){
   $appointment=  $this->appointment->find($id);
-return $appointment->delete($id);
+  return($appointment->delete($id));
+
 }
 
 

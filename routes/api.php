@@ -21,8 +21,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get('/appointments',[appointmentController::class,'getAll'])->name('appointments.getAllpage');
+Route::get('/appointments/{appointmentId}',[appointmentController::class,'getOne'])->name('appointments.getOne');
 Route::get('/appointments/create',[appointmentController::class,'getCreatepage'])->name('appointments.getCreatepage');
-Route::get('/appointments/edit/{userId}',[appointmentController::class,'getEditpage'])->name('appointments.getEditpage');
+Route::get('/appointments/edit/{appointmentId}',[appointmentController::class,'getEditpage'])->name('appointments.getEditpage');
 Route::post('/appointments',[appointmentController::class,'createOne'])->name('appointments.createOne');
-Route::post('/appointments/{userId}',[appointmentController::class,'UpdateOne'])->name('appointments.UpdateOne');
-Route::delete('/appointments/{userId}',[appointmentController::class,'RemoveOne'])->name('appointments.RemoveOne');
+Route::post('/appointments/{appointmentId}',[appointmentController::class,'UpdateOne'])->name('appointments.UpdateOne');
+Route::delete('/appointments/{appointmentId}',[appointmentController::class,'delete'])->name('appointments.RemoveOne');
