@@ -31,10 +31,8 @@ Route::group(['middleware' => 'auth.jwt'], function () {
 });
 
 
-Route::get('/appointments',[appointmentController::class,'getAll'])->name('appointments.getAllpage');
-Route::get('/appointments/{appointmentId}',[appointmentController::class,'getOne'])->name('appointments.getOne');
-Route::get('/appointments/create',[appointmentController::class,'getCreatepage'])->name('appointments.getCreatepage');
-Route::get('/appointments/edit/{appointmentId}',[appointmentController::class,'getEditpage'])->name('appointments.getEditpage');
-Route::post('/appointments',[appointmentController::class,'createOne'])->name('appointments.createOne');
-Route::post('/appointments/{appointmentId}',[appointmentController::class,'UpdateOne'])->name('appointments.UpdateOne');
-Route::delete('/appointments/{appointmentId}',[appointmentController::class,'delete'])->name('appointments.RemoveOne');
+Route::get('/appointments',[appointmentController::class,'ApigetAll'])->name('Apiappointments.getAll');
+Route::get('/appointments/{appointmentId}',[appointmentController::class,'ApigetOne'])->name('Apiappointments.getOne');
+Route::post('/appointments',[appointmentController::class,'ApicreateOne'])->name('Apiappointments.createOne');
+Route::post('/appointments/{appointmentId}',[appointmentController::class,'ApiUpdateOne'])->name('Apiappointments.UpdateOne');
+Route::delete('/appointments/{appointmentId}',[appointmentController::class,'Apidelete'])->name('Apiappointments.RemoveOne');

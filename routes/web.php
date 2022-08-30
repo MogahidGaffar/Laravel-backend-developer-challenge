@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\appointmentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+   return redirect()->route('appointments.getAllpage');
 });
+
+
+Route::get('/appointments',[appointmentController::class,'getAllpage'])->name('appointments.getAllpage');
+Route::get('/appointments/create',[appointmentController::class,'getCreatepage'])->name('appointments.getCreatepage');
+Route::get('/appointments/edit/{appointmentId}',[appointmentController::class,'getEditpage'])->name('appointments.getEditpage');
+Route::post('/appointments',[appointmentController::class,'createOne'])->name('appointments.createOne');
+Route::post('/appointments/{appointmentId}',[appointmentController::class,'UpdateOne'])->name('appointments.UpdateOne');
+Route::delete('/appointments/{appointmentId}',[appointmentController::class,'delete'])->name('appointments.RemoveOne');
